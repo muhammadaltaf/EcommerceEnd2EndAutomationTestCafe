@@ -1,0 +1,25 @@
+name: Run TestCafe Tests
+
+on:
+  push:
+    branches:
+      - main  # Run tests on push to main
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Use latest Ubuntu runner
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22  # Ensure Node.js is installed
+
+      - name: Install dependencies
+        run: npm install  # Install TestCafe and other dependencies
+
+      - name: Run TestCafe Tests (Chrome Headless + Disable Password Manager)
+        run: |
+          npm run testcafe # npx testcafe 'chrome:headless --disable-features=AutofillServerCommunication --disable-save-password-bubble --disable-password-generation --disable-popup-blocking --disable-native-automation --skip-js-errors' --reporter html:report.html test/
