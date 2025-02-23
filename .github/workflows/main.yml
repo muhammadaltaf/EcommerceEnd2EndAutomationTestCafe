@@ -1,5 +1,5 @@
 name: TestCafe Workflow
-on:[Push]
+on: [Push]
 
 jobs:
   build:
