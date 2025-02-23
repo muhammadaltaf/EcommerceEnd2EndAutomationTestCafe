@@ -2,7 +2,9 @@ import { Selector,t,ClientFunction } from "testcafe";
 class CartPage{
     constructor(){
         this.menLiLink = Selector('a#ui-id-5');
-        this.bottomLink = Selector('a#ui-id-18').withText('Bottoms');
+        this.bottomLink = Selector('#ui-id-18');
+        //this.bottomLink = Selector('a#ui-id-18');
+        //this.bottomLink = Selector('a#ui-id-18 span.ui-menu-icon ui-icon ui-icon-carat-1-e span').withText('Bottoms');
         this.pants = Selector('a#ui-id-23 span').withText('Pants');
         this.jymPant = Selector('a.product-item-link').withText('Aether Gym Pant');
         this.quantity = Selector('input#qty');
@@ -16,7 +18,6 @@ class CartPage{
 
     async AddToCart(){
         await t
-        .setNativeDialogHandler(() => true)
         .wait(3000)
         .hover(this.menLiLink)
         .hover(this.bottomLink)

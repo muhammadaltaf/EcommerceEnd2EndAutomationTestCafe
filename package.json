@@ -4,7 +4,7 @@
   "description": "Demo Project to create Login Registration and E2E test for adding product to cart",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx testcafe 'chrome:headless --disable-features=AutofillServerCommunication --disable-save-password-bubble --disable-password-generation --disable-popup-blocking --disable-native-automation --skip-js-errors' --reporter html:report.html test/"
   },
   "repository": {
     "type": "git",
@@ -17,11 +17,11 @@
   },
   "homepage": "https://github.com/muhammadaltaf/EcommerceEnd2EndAutomation#readme",
   "devDependencies": {
-    "testcafe": "^3.7.2"
+    "testcafe": "^3.7.2",
+    "testcafe-reporter-html": "^1.4.6"
   },
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
-    "testcafe-reporter-allure": "^1.0.5",
-    "testcafe-reporter-html": "^1.4.6"
+    "testcafe-reporter-allure": "^1.0.5"
   }
 }

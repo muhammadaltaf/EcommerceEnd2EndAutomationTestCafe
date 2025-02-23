@@ -12,7 +12,6 @@ class SuccessPage{
     async OrderConfirmed(){
         await t.wait(5000);
         await t.expect(this.successStatus.exists).ok();
-        await t.takeScreenshot();
         await t.expect(this.orderNo.textContent).contains('Your order # is: ');
     }
 }
