@@ -22,4 +22,4 @@ jobs:
 
       - name: Run TestCafe Tests (Chrome Headless + Disable Password Manager)
         run: |
-          npx testcafe 'chrome:headless --disable-features=AutofillServerCommunication --disable-save-password-bubble --disable-password-generation --disable-popup-blocking --disable-native-automation --skip-js-errors' --reporter html:report.html test/
+          npx testcafe 'chrome:headless --disable-features=AutofillServerCommunication --disable-save-password-bubble --disable-password-generation --disable-popup-blocking --disable-native-automation --skip-js-errors' test/
