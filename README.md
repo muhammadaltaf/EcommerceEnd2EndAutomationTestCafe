@@ -2,11 +2,13 @@
 🚀 This is a TestCafe automation project for testing an e-commerce website.
 It includes test scripts for user registration, cart functionality, and checkout flows.
 
-📥 Clone the Repository
+. 📥 Clone the Repository
 To get started, clone this repository to your local machine:
-git clone <YOUR_REPO_URL>
-cd <YOUR_PROJECT_FOLDER>
-📦 Install Dependencies
+
+1. git clone <YOUR_REPO_URL>
+2. cd <YOUR_PROJECT_FOLDER>
+
+. 📦 Install Dependencies
 Make sure you have Node.js (v20 or later) installed.
 Then, install the required dependencies:
 ```
