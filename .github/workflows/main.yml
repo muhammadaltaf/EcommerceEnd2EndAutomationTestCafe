@@ -1,5 +1,5 @@
 name: TestCafe Workflow
-on: [Push]
+on: [push]
 
 jobs:
   build:
@@ -8,4 +8,4 @@ jobs:
     - uses: actions/checkout@v2
     - uses: DevExpress/testcafe-action@latest
       with:
-       args: "chrome tests"
+       args: "chrome test"
