@@ -16,7 +16,6 @@ class CartPage{
 
     async AddToCart(){
         await t
-        .setNativeDialogHandler(() => true)
         .wait(3000)
         .hover(this.menLiLink)
         .hover(this.bottomLink)

@@ -14,7 +14,7 @@ fixture("Initial Script Settings Fixture")
     .beforeEach(async t => {
         await t
         .maximizeWindow()
-        .setTestSpeed(0.4)
+        .setTestSpeed(0.8)
         .setPageLoadTimeout(1);
     });
 

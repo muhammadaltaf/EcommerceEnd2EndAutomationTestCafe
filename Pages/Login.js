@@ -21,7 +21,6 @@ class LoginPage{
     }
 
     async UserSignOut(){
-        await t.debug();
         await t.click(this.dropDown);
         await t.wait(2000);
         await t.takeScreenshot();
