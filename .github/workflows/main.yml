@@ -1,11 +1,25 @@
-name: TestCafe Workflow
-on: [push]
+name: Run TestCafe Tests
 
+on:
+  push:
+    branches:
+      - main  # Run tests on push to main
 jobs:
-  build:
-    runs-on: windows-latest
+  test:
+    runs-on: ubuntu-latest  # Use latest Ubuntu runner
+
     steps:
-    - uses: actions/checkout@v2
-    - uses: DevExpress/testcafe-action@latest
-      with:
-       args: "chrome test"
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18  # Ensure Node.js is installed
+
+      - name: Install dependencies
+        run: npm install  # Install TestCafe and other dependencies
+
+      - name: Run TestCafe Tests (Chrome Headless + Disable Password Manager)
+        run: |
+          npx testcafe "chrome:headless --disable-features=AutofillServerCommunication --disable-save-password-bubble --disable-password-generation --disable-popup-blocking" tests/
