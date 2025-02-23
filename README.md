@@ -5,8 +5,8 @@ It includes test scripts for user registration, cart functionality, and checkout
 . 📥 Clone the Repository
 To get started, clone this repository to your local machine:
 
-1. git clone <YOUR_REPO_URL>
-2. cd <YOUR_PROJECT_FOLDER>
+1. git clone https://github.com/muhammadaltaf/EcommerceEnd2EndAutomationTestCafe.git
+2. cd EcommerceEnd2EndAutomationTestCafe
 
 . 📦 Install Dependencies
 Make sure you have Node.js (v20 or later) installed.
